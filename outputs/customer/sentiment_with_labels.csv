@@ -1,0 +1,26 @@
+cleaned_sentence,sentiment,sentence_id
+datang pasar komuniti kadang tak selalu,neutral,1
+biasa datang masa lapang beli keperluan,neutral,2
+tahu pasal tempat kawan cadang tengok,neutral,3
+tempat memenuhi keperluan komuniti,positive,4
+produk menarik pilihan,positive,5
+lokasi senang cari mudah akses,positive,6
+kemudahan okay memuaskan,positive,7
+suasana bersih selesa,positive,8
+harga berpatutan tak mahal,positive,9
+media sosial pengaruh datang,neutral,10
+promosi aktiviti menarik,positive,11
+akan datang lagi,positive,12
+tak ada masalah recommend,positive,13
+banyak promosi aktiviti tarik pengunjung,positive,14
+satu bulan datang dua kali,neutral,15
+tempat memenuhi keperluan,positive,16
+produk menarik pilihan susah jumpa,positive,17
+lokasi biasa parking susah,negative,18
+kemudahan ok cukup,neutral,19
+suasana kebersihan ok kotor sikit,negative,20
+harga mahal banding tempat lain,negative,21
+media sosial tak pengaruh,neutral,22
+akan datang semula,positive,23
+kawan tanya recommend,positive,24
+promosi aktiviti menarik pengunjung,positive,25
