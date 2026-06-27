@@ -56,9 +56,10 @@ st.markdown("""
         100% { opacity: 1; transform: translateY(0); }
     }
     
-    /* ===== Soft background ===== */
+    /* ===== Light mode (default) ===== */
     .stApp {
         background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+        color: #000000;
     }
     
     /* ===== Enhanced Metric Cards ===== */
@@ -140,20 +141,58 @@ st.markdown("""
         box-shadow: 0 4px 12px rgba(0,0,0,0.04);
     }
     
-    /* ===== Dark mode overrides ===== */
-    .dark-mode .stApp {
+    /* ===== Dark mode toggle (your existing toggle) ===== */
+    .stApp.dark-mode {
         background: #1a1a2e !important;
+        color: #e0e0e0 !important;
     }
-    .dark-mode .stMetric {
+    
+    .stApp.dark-mode .stMetric {
         background: rgba(30, 30, 60, 0.85) !important;
         border: 1px solid rgba(255,255,255,0.05) !important;
         box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important;
     }
-    .dark-mode .stMetric label {
+    
+    .stApp.dark-mode .stMetric label {
         color: #a0a0c0 !important;
     }
-    .dark-mode .stMetric value {
+    
+    .stApp.dark-mode .stMetric value {
         color: #667eea !important;
+    }
+    
+    .stApp.dark-mode .stMarkdown,
+    .stApp.dark-mode .stCaption,
+    .stApp.dark-mode .stHeading {
+        color: #e0e0e0 !important;
+    }
+    
+    .stApp.dark-mode .stAlert {
+        background: rgba(30, 30, 60, 0.8) !important;
+        color: #d0d0d0 !important;
+    }
+    
+    .stApp.dark-mode .stDataFrame {
+        background: #1a1a2e !important;
+    }
+    
+    /* ===== Prevent phone system dark mode from overriding ===== */
+    @media (prefers-color-scheme: dark) {
+        .stApp:not(.dark-mode) {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%) !important;
+            color: #000000 !important;
+        }
+        .stApp:not(.dark-mode) .stMetric label {
+            color: #000000 !important;
+        }
+        .stApp:not(.dark-mode) .stMetric value {
+            color: #667eea !important;
+        }
+        .stApp:not(.dark-mode) .stMarkdown,
+        .stApp:not(.dark-mode) .stCaption,
+        .stApp:not(.dark-mode) .stHeading {
+            color: #000000 !important;
+        }
     }
 </style>
 """, unsafe_allow_html=True)
@@ -784,7 +823,7 @@ elif page == "🌐 SNA Network":
         """, unsafe_allow_html=True)
     
     st.divider()
-    
+
     st.info("💡 **Insight:** The social network shows an active community discussing Cmart Changlun. Key influencers can be identified to become ambassadors for the loyalty program. This analysis helps identify influential individuals for marketing strategies.")
 
 # --- COMPARISON PAGE ---
